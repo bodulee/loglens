@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bodulee-loglens"
+version = "0.1.0"
+description = "A dependency-free CLI for local Nginx and Apache access log analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "bodulee"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: System :: Logging",
+]
+
+[project.scripts]
+loglens = "loglens.cli:main"
+
+[project.urls]
+Repository = "https://github.com/bodulee/loglens"
+Issues = "https://github.com/bodulee/loglens/issues"
+
+[tool.setuptools.packages.find]
+include = ["loglens*"]
